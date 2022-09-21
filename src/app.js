@@ -6,6 +6,7 @@ const geocode = require('../utilty/geocode')
 const forecast = require('../utilty/forecast.js')
 const req = require('request')
 
+const port = process.env.PORT || 3000
 // console.log(__dirname)
 // console.log(__filename)
 const Partial = path.join(__dirname, '../partials')
@@ -70,7 +71,7 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server started correctly")
 })
 
